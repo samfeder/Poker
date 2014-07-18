@@ -22,7 +22,8 @@ class Card
     :ten => 10,
     :jack => 11,
     :queen => 12,
-    :king => 13
+    :king => 13,
+    :ace => 14
   }
 
   NAMES = {
@@ -64,11 +65,11 @@ class Card
   end
 
   def value
-   raise AcesAreWonky if @name == :ace
    VALUES[@name]
   end
 
-end
+  def self.card_values
+    VALUES
+  end
 
-class AcesAreWonky < StandardError
 end

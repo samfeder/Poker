@@ -39,13 +39,6 @@ describe Card do
       expect(deuce_of_clubs.value).to eq(2)
       expect(rando.value).to eq(4)
     end
-
-    it "raises an exception for aces" do
-      expect { ace_of_spades.value }.to raise_error(AcesAreWonky)
-    end
-
-
-
   end
 
 end
